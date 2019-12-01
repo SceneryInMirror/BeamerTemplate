@@ -1,0 +1,180 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{default}
+\useoutertheme{infolines}
+\graphicspath{{figures/}}
+
+
+% ========================
+% Packages
+% ========================
+\usepackage{
+	amsmath,        % math environment
+	amssymb,		% extended symbols
+	enumerate,	    % enumerate environment
+	extarrows,      % special arrows
+	graphicx,		% include figures
+	lastpage,		% lastpage
+	multicol,		% multi-column for table
+	multirow,		% multi-row for table
+	palatino,       % for font
+	xeCJK,          % chinese
+}
+
+
+% ========================
+% Colors
+% ========================
+\definecolor{MyOrange}{RGB}{212,69,0}
+\definecolor{MyGray}{RGB}{132,131,130}
+\definecolor{MyRed}{RGB}{139,0,18}
+\definecolor{MyYellow}{RGB}{255,204,0}
+\setbeamercolor{title}{fg=MyGray}
+\setbeamercolor{structure}{fg=MyRed}
+\setbeamercolor{local structure}{fg=black}
+\setbeamercolor{section in head/foot}{bg=MyGray,fg=MyRed}
+\setbeamercolor{author in head/foot}{bg=MyGray}
+%\setbeamercolor{date in head/foot}{fg=MyYellow}
+
+
+% ========================
+% Fonts & Layouts
+% ========================
+\usefonttheme{serif}
+%\usepackage{palatino}
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[default]
+\logo{\includegraphics[scale=0.1]{PKU.png}}
+\setbeamercovered{transparent}
+%\setbeamertemplate{footline}[frame number]
+%\expandafter\def\expandafter\insertshorttitle\expandafter{%
+%	\insertshorttitle\hfill%
+%	\insertframenumber\,/\,\inserttotalframenumber}
+
+
+% ========================
+% Commands
+% ========================
+\renewcommand{\thefootnote}{}
+\renewcommand{\today}{\number\year 年\number\month 月\number\day 日}
+
+% ========================
+% Title Page
+% ========================
+\title{\textcolor{white}{一个简单粗暴的模板}}
+\subtitle{\textcolor{white}{一个使用了北大红的简单粗暴的模板}}  
+\author{这是我：杨凯欣}
+\date{\today} 
+
+
+% ========================
+% Content
+% ========================
+\begin{document}
+	
+	
+	% ========================
+	% Title Page
+	% ========================
+	\begin{frame}
+	\titlepage
+\end{frame}
+
+
+% ========================
+% Content
+% ========================
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+% ========================
+% First Section
+% ========================
+\section{第一节（揉...揉天应穴？误...）}
+
+
+% ------------------------
+% Section 1.1
+% ------------------------
+\subsection{这是第一节的第一小节}
+\begin{frame}{为了省事就用英文了...}
+xxxx reads the original verilog file line by line, and parses each line by some key words. \\
+They define new structures called \textcolor{MyRed}{\bf `graph', `vertex' and `edge'}, which are corresponding to different elements in the netlist:
+$$\text{netlist}\xLongrightarrow{\text{converted to}}\text{graph}$$ 
+$$\text{gates/FFs}\xLongrightarrow{\text{converted to}}\text{vertices}$$ 
+$$\text{inputs \& outputs of each vertex}\xLongrightarrow{\text{converted to}}\text{edges}$$ 
+\footnote{\tiny Reference:}
+\end{frame}
+
+
+% ------------------------
+% Section 1.2
+% ------------------------
+\subsection{这是第一节的第二小节}
+\begin{frame}
+\begin{block}{Two steps to identify all state FFs (sequential vertices):}
+\begin{enumerate}
+\item Identifying all the FFs, ...
+\item Searching for cycles in the graph, ... 
+\end{enumerate}
+\end{block}
+
+\begin{block}{使用北大标识要遵守学校规范哦（其实我也不知道自己用的对不对...）}
+Ref: https://vim.pku.edu.cn/xzzq/index.htm
+\begin{figure}[H]
+\includegraphics[width=0.25\columnwidth]{PKU.png}
+\caption{PKU}
+\label{PKU}
+\end{figure}
+\end{block}
+
+\end{frame}
+
+
+% ========================
+% Second Section
+% ========================
+\section{第二节（挤...挤按睛明穴...）}
+
+
+% ------------------------
+% Section 2.1
+% ------------------------
+\subsection{这是第二节的第一小节}
+\begin{frame}
+\begin{enumerate}[Q1:]
+\item How many gates inserted? \\
+- Decided by users (variable in the configuration file)
+\item Where to insert the gates? \\
+- The outputs of combinational gates 
+\end{enumerate}
+{\bf Conclusion: xxxxxxxxxxx}
+\end{frame}
+
+
+% ========================
+% Last Page
+% ========================
+\section{}
+\begin{frame}
+\begin{center} 
+{\bfseries \Large Thank you!} \\
+任何问题都可以联系我：) \\
+email: kaixinya@usc.edu
+\end{center}
+\end{frame}
+
+
+% ========================
+% End
+% ========================
+\end{document}
+
+
+% ========================================================================
+% ========================================================================
+% ========================================================================

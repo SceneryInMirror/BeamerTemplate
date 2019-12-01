@@ -1,0 +1,174 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{default}
+\useoutertheme{infolines}
+\graphicspath{{figures/}}
+
+
+% ========================
+% Packages
+% ========================
+\usepackage{
+	amsmath,        % math environment
+	amssymb,		% extended symbols
+	enumerate,	    % enumerate environment
+	extarrows,      % special arrows
+	graphicx,		% include figures
+	lastpage,		% lastpage
+	multicol,		% multi-column for table
+	multirow,		% multi-row for table
+	palatino,       % for font
+}
+
+
+% ========================
+% Colors
+% ========================
+\definecolor{MyOrange}{RGB}{212,69,0}
+\definecolor{MyGray}{RGB}{62,61,60}
+\definecolor{MyRed}{RGB}{153,0,0}
+\definecolor{MyYellow}{RGB}{255,204,0}
+\setbeamercolor{title}{fg=MyYellow}
+\setbeamercolor{structure}{fg=MyRed}
+\setbeamercolor{local structure}{fg=black}
+\setbeamercolor{section in head/foot}{bg=MyYellow,fg=MyRed}
+%\setbeamercolor{author in head/foot}{fg=MyYellow}
+%\setbeamercolor{date in head/foot}{fg=MyYellow}
+
+
+% ========================
+% Fonts & Layouts
+% ========================
+\usefonttheme{serif}
+%\usepackage{palatino}
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[default]
+\logo{\includegraphics[scale=0.03]{USC.png}}
+\setbeamercovered{transparent}
+%\setbeamertemplate{footline}[frame number]
+%\expandafter\def\expandafter\insertshorttitle\expandafter{%
+%	\insertshorttitle\hfill%
+%	\insertframenumber\,/\,\inserttotalframenumber}
+
+
+% ========================
+% Commands
+% ========================
+\renewcommand{\thefootnote}{}
+
+
+% ========================
+% Title Page
+% ========================
+\title{\textcolor{white}{Code Review}}
+\subtitle{\textcolor{white}{Methods of Hardware Obfuscation}}  
+\author{Kaixin Yang}
+\date{\today} 
+
+
+% ========================
+% Content
+% ========================
+\begin{document}
+
+
+% ========================
+% Title Page
+% ========================
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+% ========================
+% Content
+% ========================
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+% ========================
+% First Section
+% ========================
+\section{Importing the Original Desgin}
+
+
+% ------------------------
+% Constructing Graph from Verilog
+% ------------------------
+\subsection{Constructing graph from verilog}
+\begin{frame}{How to parse the verilog file?}
+xxxx reads the original verilog file line by line, and parses each line by some key words. \\
+They define new structures called \textcolor{MyRed}{\bf `graph', `vertex' and `edge'}, which are corresponding to different elements in the netlist:
+$$\text{netlist}\xLongrightarrow{\text{converted to}}\text{graph}$$ 
+$$\text{gates/FFs}\xLongrightarrow{\text{converted to}}\text{vertices}$$ 
+$$\text{inputs \& outputs of each vertex}\xLongrightarrow{\text{converted to}}\text{edges}$$ 
+\footnote{\tiny Reference:}
+\end{frame}
+
+
+% ------------------------
+% Identifying the state FFs
+% ------------------------
+\subsection{Identifying the state FFs}
+\begin{frame}
+\begin{block}{Two steps to identify all state FFs (sequential vertices):}
+\begin{enumerate}
+\item Identifying all the FFs, ...
+\item Searching for cycles in the graph, ... 
+\end{enumerate}
+\end{block}
+
+\begin{block}{Example}
+\begin{figure}[H]
+\includegraphics[width=0.3\columnwidth]{USC.png}
+\caption{abc}
+\label{abc}
+\end{figure}
+\end{block}
+
+\end{frame}
+
+
+% ========================
+% Obfuscating the Original Design
+% ========================
+\section{Obfuscating the Original Design}
+
+
+% ------------------------
+% Insert Gates
+% ------------------------
+\subsection{Inserting Gates}
+\begin{frame}
+\begin{enumerate}[Q1:]
+\item How many gates inserted? \\
+- Decided by users (variable in the configuration file)
+\item Where to insert the gates? \\
+- The outputs of combinational gates 
+\end{enumerate}
+{\bf Conclusion: xxxxxxxxxxx}
+\end{frame}
+
+
+% ========================
+% Last Page
+% ========================
+\section{}
+\begin{frame}
+\begin{center} {\bfseries \Large Thank you!} \end{center}
+\end{frame}
+
+
+% ========================
+% End
+% ========================
+\end{document}
+
+
+% ========================================================================
+% ========================================================================
+% ========================================================================
